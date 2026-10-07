@@ -3,3 +3,6 @@ lisa-design:
 - notify passes workflows-ref equal to the pinned SHA because a reusable workflow can't see the ref it was called at (README).
 - make-targets: "test build" only; mock-api has no swag/check-opa-version/test-integration targets.
 - Top-level permissions: {} with per-job grants exactly as the shared README documents (ci-common needs security-events: write for osv-scanner).
+
+lisa-selfreview:
+- pass 1 (strict): no findings. Checked CORE-CI-001 (reusable workflows pinned by full SHA, top-level permissions: {}, per-job grants per README), CORE-DUP-001 (SHA repeated 3x is required: notify-failure needs workflows-ref equal to the called ref), CORE-SCOPE-001 (only ci.yml added). make test / make build / gofmt / go vet pass locally.
