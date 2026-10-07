@@ -1,0 +1,5 @@
+lisa-design:
+- Pinned to compliance-framework/workflows@87edd2b700d6dc6de8d49c1f44e525dd39e4db31 (head of workflows#7) on purpose for the W1-S1 caller trial, not @v1; move to a tag once released.
+- notify passes workflows-ref equal to the pinned SHA because a reusable workflow can't see the ref it was called at (README).
+- make-targets: "test build" only; mock-api has no swag/check-opa-version/test-integration targets.
+- Top-level permissions: {} with per-job grants exactly as the shared README documents (ci-common needs security-events: write for osv-scanner).
