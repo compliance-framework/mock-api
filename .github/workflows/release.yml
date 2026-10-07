@@ -9,7 +9,7 @@ permissions:
 
 jobs:
   release:
-    uses: compliance-framework/workflows/.github/workflows/release-go-image.yml@ra/w1-s1-t05b-repo-settings-workflow
+    uses: compliance-framework/workflows/.github/workflows/release-go-image.yml@main
     with:
       images: '[{"name":"mock-api","dockerfile":"Dockerfile","context":"."}]'
     permissions:
