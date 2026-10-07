@@ -5,3 +5,6 @@ lisa-design:
 - ci.yml pull_request types gain labeled/unlabeled: README says release-checks reads labels from the event (release:major-approved re-check).
 - notify needs both ci and release-checks so a failed release check posts too; release-checks is skipped on non release-please-- PRs, which doesn't trip failure().
 - Image list passed explicitly ({"name":"mock-api","dockerfile":"Dockerfile","context":"."}) to both release.yml and preview.yml, identical strings.
+
+lisa-selfreview:
+pass 1 (approve): no blocking findings. Deferred nit (CORE-DUP-001, accepted by design): the workflows SHA appears 6x + workflows-ref, and the images JSON is repeated in release.yml and preview.yml; both must stay equal and are required by the adoption spec (Renovate/ccf-bump will move the pins together). YAML parses; actionlint runs in CI (ci-common).
