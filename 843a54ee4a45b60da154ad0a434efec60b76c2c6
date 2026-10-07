@@ -5,3 +5,6 @@ pass 1:
 
 lisa-design:
 - The Makefile `build` target is the single source of build flags; the Dockerfile calls it rather than repeating go build flags.
+
+lisa-selfreview:
+pass 2 (strict): approve, no findings. Re-verified go vet, go test -count=1, make build, docker build (with and without VERSION), container /healthz 200 and version log line.
