@@ -4,3 +4,8 @@ lisa-design:
 - No go.sum (no dependencies); Dockerfile copies go.mod only for the download layer. Add go.sum to that COPY if dependencies appear.
 - Server uses only net/http (Go 1.22+ method patterns, "GET /healthz") to keep the mock dependency-free; api uses Echo, which isn't needed to exercise release workflows.
 - Makefile adds docker-build beyond the required build/test targets; no .github/workflows (S1 adds them).
+
+lisa-selfreview:
+pass 1 (strict): request_changes
+- [must-fix] CORE-TEST-002 pkg/version/version_test.go:6 TestHello recomputes expected value like the impl (bee342d58f08)
+- [should-fix] CORE-DUP-001 Dockerfile:13 build ldflags duplicated between Makefile and Dockerfile (49976ece95fe)
