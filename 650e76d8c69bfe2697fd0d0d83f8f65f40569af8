@@ -1,0 +1,7 @@
+lisa-design:
+- All shared-workflow refs and notify's workflows-ref pinned to the same full SHA 084cc5d5ee6a40455f84b4f3108cfb254654ae28 (head of workflows#12), not @v1: the release workflows aren't tagged yet.
+- release-please-config.json copies every key of workflows' release-please/defaults.json verbatim (release-please has no remote extends; the shared workflow warns on drift) and adds only packages ".": go.
+- Manifest seeded at 0.0.0 so the first feat on main yields a 0.1.0 release PR (bump-minor-pre-major).
+- ci.yml pull_request types gain labeled/unlabeled: README says release-checks reads labels from the event (release:major-approved re-check).
+- notify needs both ci and release-checks so a failed release check posts too; release-checks is skipped on non release-please-- PRs, which doesn't trip failure().
+- Image list passed explicitly ({"name":"mock-api","dockerfile":"Dockerfile","context":"."}) to both release.yml and preview.yml, identical strings.
