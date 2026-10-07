@@ -1,5 +1,5 @@
 VERSION ?= dev
-LDFLAGS := -X main.buildVersion=$(VERSION)
+LDFLAGS := -s -w -X main.buildVersion=$(VERSION)
 
 .PHONY: build test docker-build
 
