@@ -1,0 +1,4 @@
+lisa-addressed:
+pass 1:
+- CORE-TEST-002 (bee342d58f08): TestHello now asserts the literal "hello from mock-api 0.1.0" instead of recomputing it.
+- CORE-DUP-001 (49976ece95fe): Dockerfile builds via `make build VERSION=${VERSION}` and copies dist/mock-api; the Makefile is the single owner of build flags (CGO_ENABLED=0, -trimpath, -s -w, -X main.buildVersion).
