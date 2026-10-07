@@ -1,0 +1,2 @@
+lisa-selfreview:
+Self-review pass 1: approve, no findings. Mechanical repin of every compliance-framework/workflows SHA ref (uses: and workflows-ref:) to branch ra/w1-s1-t05b-repo-settings-workflow; verified branch exists (58b719f) and contains all called workflow files; notify-failure's workflows-ref is used as actions/checkout ref, so a branch name works. No SHA pin left.
