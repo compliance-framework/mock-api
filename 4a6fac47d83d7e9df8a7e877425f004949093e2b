@@ -1,6 +1,0 @@
-lisa-design:
-- pkg/version.Version stays a const (spec item 3), so it can't be set via -ldflags -X. The Docker/Make VERSION build arg instead sets main.buildVersion (a var, default "dev"). Version = library version importers see; buildVersion = the release tag of the binary/image. Release tooling should set VERSION, and bump the const when the library version changes.
-- Static binary: CGO_ENABLED=0 on golang:1.26.1, final image gcr.io/distroless/static-debian12:nonroot (api uses distroless/base with CGO on; static was asked for here).
-- No go.sum (no dependencies); Dockerfile copies go.mod only for the download layer. Add go.sum to that COPY if dependencies appear.
-- Server uses only net/http (Go 1.22+ method patterns, "GET /healthz") to keep the mock dependency-free; api uses Echo, which isn't needed to exercise release workflows.
-- Makefile adds docker-build beyond the required build/test targets; no .github/workflows (S1 adds them).
