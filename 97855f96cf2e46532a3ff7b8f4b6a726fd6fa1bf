@@ -1,0 +1,4 @@
+lisa-design:
+- Fix lives in main.go (/healthz Cache-Control: no-store), not in pkg/version.Hello(): mock-agent prints mockapi.Hello(), so changing the greeting would change a consumer's output on its next mock-api bump. This keeps the 0.1.1 fix invisible to importers.
+- Commit type is fix: so release-please proposes 0.1.1 (bump-minor-pre-major; patch for fix on 0.x).
+- pkg/version.Version stays "0.1.0": release-please (release-type go) does not update it, and bumping it is out of scope for this trivial fix.
