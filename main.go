@@ -21,8 +21,11 @@ func newMux() *http.ServeMux {
 	return mux
 }
 
+// healthz reports liveness. The answer must never be cached: a proxy or client
+// serving a stale "ok" would hide a server that has since gone down.
 func healthz(w http.ResponseWriter, _ *http.Request) {
 	w.Header().Set("Content-Type", "text/plain; charset=utf-8")
+	w.Header().Set("Cache-Control", "no-store")
 	w.WriteHeader(http.StatusOK)
 	_, _ = w.Write([]byte("ok"))
 }
