@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/compliance-framework/mock-api/compare/v0.1.0...v0.1.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* never cache the /healthz response ([#12](https://github.com/compliance-framework/mock-api/issues/12)) ([9399e95](https://github.com/compliance-framework/mock-api/commit/9399e950dd669b1ce6791bdd86e16365d026ed3f))
+
 ## 0.1.0 (2026-10-07)
 
 
