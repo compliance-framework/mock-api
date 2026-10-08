@@ -1,0 +1,4 @@
+lisa-design:
+Throwaway e2e PR for W1-S3-E2E-NOTIFY: commits A (failing test), B (+ gofmt break), C (revert both) exercise
+notify-failure open -> reply -> close. Never merge; close and delete the branch afterwards.
+Self-review kept minimal by design (throwaway test PR).
