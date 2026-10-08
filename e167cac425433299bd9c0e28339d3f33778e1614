@@ -1,0 +1,4 @@
+lisa-design:
+- The caller is copied verbatim from the workflows README snippet except the ref: @main instead of @v1, because every mock-* caller tracks workflows main (never a SHA, never a tag) while the stack is proven on mocks.
+- Caller grants only contents: read; the reusable workflow does its writes with a ccf-release-bot App token, so the prerelease it creates triggers release.yml. secrets: inherit supplies RELEASE_BOT_APP_ID/RELEASE_BOT_PRIVATE_KEY.
+- No README change: mock-api's README documents the service, not its CI callers (none of ci/preview/release callers are listed there).
