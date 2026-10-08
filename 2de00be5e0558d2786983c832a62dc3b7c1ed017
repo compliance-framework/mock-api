@@ -1,0 +1,3 @@
+lisa-design:
+- Only the pull_request types list changes (closed appended); existing types, pins and jobs untouched per spec W1-S3-MOCK-CLOSED.
+- Relies on the shared ci-go-service workflow (v1.3.0) skipping its jobs on closed PRs; notify-failure.yml uses the closed event to mark the needs-human card handled and close the CI incident.
