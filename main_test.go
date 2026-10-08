@@ -27,6 +27,9 @@ func TestHealthz(t *testing.T) {
 	if string(body) != "ok" {
 		t.Fatalf("body = %q, want %q", body, "ok")
 	}
+	if got := resp.Header.Get("Cache-Control"); got != "no-store" {
+		t.Fatalf("Cache-Control = %q, want %q", got, "no-store")
+	}
 }
 
 func TestUnknownPathIsNotFound(t *testing.T) {
