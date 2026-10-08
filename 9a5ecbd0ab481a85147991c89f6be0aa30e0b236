@@ -1,0 +1,2 @@
+lisa-addressed:
+Step 2 of W1-S3-E2E-NOTIFY: gofmt break (space indent) on top of the failing test; expect a notify reply.
