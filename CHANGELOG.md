@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/compliance-framework/mock-api/compare/v0.1.1...v0.1.2) (2026-10-09)
+
+
+### Bug Fixes
+
+* say "serving on" in the startup log ([#20](https://github.com/compliance-framework/mock-api/issues/20)) ([be2c41d](https://github.com/compliance-framework/mock-api/commit/be2c41d5cb6a4c66dfad20d4bed6081bce3dc036))
+
 ## [0.1.1](https://github.com/compliance-framework/mock-api/compare/v0.1.0...v0.1.1) (2026-10-08)
 
 
