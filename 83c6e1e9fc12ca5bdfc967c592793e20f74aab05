@@ -1,0 +1,2 @@
+lisa-addressed:
+- CORE-DUP-001 (e626781f1a86) main.go:39: dropped the hardcoded "GET /healthz" from the startup log; the rc-test change is now "listening on" -> "serving on", which repeats no route literal.
