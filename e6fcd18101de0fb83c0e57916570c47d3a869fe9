@@ -1,0 +1,3 @@
+lisa-design:
+- The rc-test change is a user-visible log string in main.go (startup line names GET /healthz), chosen over touching pkg/version: Version/Hello are pinned by version_test.go and imported by mock-agent, and the spec forbids changing tests.
+- The fix: type exists only so release-please opens a release PR on main for the W1-S3 cut-prerelease rc test; cut-prerelease.yml caller already exists and is intentionally untouched, as are all workflow pins.
