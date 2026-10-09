@@ -36,7 +36,7 @@ func main() {
 		Handler:           newMux(),
 		ReadHeaderTimeout: 5 * time.Second,
 	}
-	log.Printf("mock-api %s (lib %s) listening on %s", buildVersion, version.Version, srv.Addr)
+	log.Printf("mock-api %s (lib %s) listening on %s; health check at GET /healthz", buildVersion, version.Version, srv.Addr)
 	if err := srv.ListenAndServe(); err != nil && !errors.Is(err, http.ErrServerClosed) {
 		log.Fatal(err)
 	}
